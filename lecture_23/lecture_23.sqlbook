@@ -36,6 +36,19 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
+-- Active: 1744807219583@@127.0.0.1@5432@maliayap
+-- Active: 1710903290079@@127.0.0.1@5432@postgres
+-- If the table already exists we can drop it:
+-- If it doesn't exist nothing happens
+-- System commands are in upper case and user defined
+-- names are in lower case
+-- Comments are written with double dashes "--" rather than hashtag (#)
+
+DROP TABLE IF EXISTS drivers;
+-- SQLBook: Code
+
+-- SQLBook: Code
+-- Active: 1744807219583@@127.0.0.1@5432@maliayap
 -- Active: 1710903290079@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
@@ -49,6 +62,7 @@ DROP TABLE IF EXISTS drivers;
 
 Create empty table from codebook
 -- SQLBook: Code
+-- Active: 1744807219583@@127.0.0.1@5432@maliayap
 -- Create empty TABLE called "drivers"
 -- This example has five arguments separated by a comma
 -- that contain the "column_name" and "column_type", respectively
@@ -64,6 +78,7 @@ CREATE TABLE drivers(
 
 Add rows to table
 -- SQLBook: Code
+-- Active: 1744807219583@@127.0.0.1@5432@maliayap
 -- "INSET INTO" adds rows with VALUES ... to the bottom of the table
 -- In SQL different lines need to be separated by a semicolon ";"
 -- You write system commands in capital letters to easily distinguish
@@ -100,7 +115,8 @@ Try it yourself!
 -- Select a new driver id (needs to be unique)
 -- Make sure to deparate arguments by a semicolon!
 
-
+INSERT INTO drivers  VALUES (7, 'Malia Yap', 'malialand',999);
+INSERT INTO drivers  VALUES (8, 'Aimee Zhang', 'aimeeland',999);
 
 
 -- SQLBook: Markup
@@ -189,6 +205,8 @@ with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
 
+SELECT nationality, driver_id FROM drivers
+WHERE victories > 60
 
 
 -- SQLBook: Markup
